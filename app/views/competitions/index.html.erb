@@ -5,6 +5,10 @@
 
 <div id="box">
     <h1 class='title'>Listing competitions</h1>
+    <%unless notice.blank?%>
+        <div class="alert alert-success alert-dismissible show" 
+         role="alert" style="width:89%;margin:auto;">Competition successfully added!</div>
+    <%end%>
     <%if Competition.blank?%>
         <div class="alert alert-info" role="alert">No records found!</div>
     <%else%>

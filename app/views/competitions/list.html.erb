@@ -14,7 +14,7 @@
                   <div class="col-sm-1"><%=c.id%></div>
                   <div class="col-sm-8"><%=c.title%></div>
                   <div class="col-sm-1">
-                    <%= link_to "View", new_competition_path %>
+                    <%= link_to "View", competition_path(c) %>
                   </div>
                   <div class="col-sm-1">
                      <%= link_to "Edit", edit_competition_path(c) %>
@@ -33,7 +33,7 @@
     </div>
     <div id="addCompetition" class="footer">
       <button class="linkButton">
-          <%= link_to "Back to ", competitions_path %>
+          <%= link_to "Back to List", competitions_path %>
       </button>   
   </div>
 </div>
