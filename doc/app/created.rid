@@ -1,0 +1,12 @@
+Thu, 05 Jul 2018 13:43:55 +0800
+doc/README_FOR_APP	Wed, 04 Jul 2018 15:06:01 +0800
+app/controllers/application_controller.rb	Wed, 04 Jul 2018 15:06:01 +0800
+app/controllers/categories_controller.rb	Wed, 04 Jul 2018 15:09:56 +0800
+app/controllers/competitions_controller.rb	Wed, 04 Jul 2018 15:08:41 +0800
+app/controllers/home_controller.rb	Wed, 04 Jul 2018 15:12:33 +0800
+app/helpers/application_helper.rb	Wed, 04 Jul 2018 15:06:01 +0800
+app/helpers/categories_helper.rb	Wed, 04 Jul 2018 15:09:56 +0800
+app/helpers/competitions_helper.rb	Wed, 04 Jul 2018 15:08:42 +0800
+app/helpers/home_helper.rb	Wed, 04 Jul 2018 15:12:33 +0800
+app/models/category.rb	Wed, 04 Jul 2018 15:09:56 +0800
+app/models/competition.rb	Thu, 05 Jul 2018 13:27:03 +0800

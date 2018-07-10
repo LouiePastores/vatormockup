@@ -1,0 +1,39 @@
+<%= stylesheet_link_tag params[:controller] %>
+<% content_for :head do %>
+  
+<% end %>
+
+<div id="box">
+    <h1 class='title'>Listing competitions</h1>
+    <%if Competition.blank?%>
+        <div class="alert alert-info" role="alert">No records found!</div>
+    <%else%>
+    <center>
+        <div id="competition-container">
+            <% @competitions.each do |competition| %>
+            <div id="competition">
+                <h3 class="competition-title"><%=competition.title%></h3>
+                <p class="competition-description">
+                    <%=truncate(strip_tags(competition.description), length: 120, separator: ' ').html_safe%>
+                </p>
+                <p class="competition-category">Category: <%=competition.category%></p>
+                <center>
+                    <p class="competition-details">
+                        Competition starts at <%=competition.start_date.strftime(' %B %d, %Y')%> and ends at <%=competition.end_date.strftime(' %B %d, %Y')%>
+                    </p>
+                </center>
+            </div>
+            <%end%>
+        </div>
+    </center>
+    <%end%>
+</div>
+
+<div id="addCompetition" class="footer">
+    <button class="linkButton">
+        <%= link_to "Add Competition", new_competition_path %>
+    </button>
+    <button class="linkButton">
+        <%= link_to "Edit Competitions", list_competition_path %>
+    </button>    
+</div>

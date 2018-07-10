@@ -1,0 +1,142 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *= require bootstrap
+ *= require_self
+ *= require_tree .
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.title{
+	text-align: center;
+	font-size: 3vw; 
+}
+
+#box{
+	margin: 2%;
+	margin-top: 4%;
+	display: block;
+
+}
+
+[class*="col-"] {
+  padding: 1%;
+  /*background-color: #eee;*/
+  /*background-color: rgba(86,61,124,.15);*/
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+  text-align: center;
+}
+
+.submit-form{
+	background-color: rgb(133, 249, 94);
+	border-style: none;
+	border-radius: 5px;
+	padding: 2%;
+}
+
+.competition-form{
+	width: 30%;
+	margin: auto;
+}
+
+label{
+	text-align: center;
+	margin: 0.5%;
+	color: rgb(133, 249, 94);
+}
+
+.alert{
+	padding: 1%;
+	text-align: center;
+}
+
+#competition-container{
+	margin: 2%;
+	padding: 2%;
+	display: table-cell;
+	border-spacing: 0.5em 0.5em;
+}
+
+#competition{
+	margin: 0.5%;
+	background-color: rgb(133, 249, 94);
+	width: 30%;
+	overflow: hidden;
+	display: inline-block;
+	height: 20em;
+}
+
+#addCompetition{
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: 1%;
+}
+
+.linkButton{
+	background-color: rgb(133, 249, 94);
+	border-radius: 8px;
+	border: none;
+	padding: 1.5%;
+	font-size: 2.5vmin;
+}
+
+a:link, a:visited {
+    color: black;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:hover, a:active {
+    background-color: rgb(133, 249, 94);
+}
+
+
+.competition-title{
+	text-align: center;
+	font-size: 2.5vmin;
+}
+
+.competition-description{
+	padding: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+.competition-category{
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: right;
+	text-justify: inter-word;
+	font-size: 2vmin;
+}
+
+.competition-details{
+	padding: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: center;
+	text-justify: inter-word;
+	font-size: 2vmin;	
+}
+
+
+#create{
+	text-align: center;
+}
+
+#addCompetition{
+	float: absolute;
+}

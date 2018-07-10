@@ -1,0 +1,37 @@
+<div id="box">
+	<h1 class="title">List of Competitions</h1>
+		<div class="container">
+      <div class="row">
+        <%if Competition.blank?%>
+          <div class="alert alert-info" role="alert">No records found!</div>
+        <%else%>
+          <div class="col-sm-1">ID</div>
+            <div class="col-sm-8">Competition Title</div>
+            <div class="col-sm-3">Action</div>
+          </div>
+              <% @competitions.each do |c|%>
+                <div class="row">
+                  <div class="col-sm-1"><%=c.id%></div>
+                  <div class="col-sm-8"><%=c.title%></div>
+                  <div class="col-sm-1">
+                    <%= link_to "View", new_competition_path %>
+                  </div>
+                  <div class="col-sm-1">
+                     <%= link_to "Edit", edit_competition_path(c) %>
+                  </div>
+                  <div class="col-sm-1">
+                    <%= link_to "Delete", competition_path(c),
+                      method: :delete,
+                      data: {confirm: 'Are you sure?'}
+                     %>
+                  </div>
+                </div>
+              <%end%>
+        <%end%>
+    </div>
+    <div id="addCompetition" class="footer">
+      <button class="linkButton">
+          <%= link_to "Back to ", competitions_path %>
+      </button>   
+  </div>
+</div>
