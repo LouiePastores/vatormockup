@@ -82,6 +82,7 @@ class CompetitionsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to list_competition_path }
+      format.js { render :layout => false }
       format.json { head :no_content }
     end
   end

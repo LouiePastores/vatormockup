@@ -22,7 +22,9 @@
                   <div class="col-sm-1">
                     <%= link_to "Delete", competition_path(c),
                       method: :delete,
-                      data: {confirm: 'Are you sure?'}
+                      :remote => true,
+                      data: {confirm: 'Are you sure?'},
+                      :class => 'delete-competition'
                      %>
                   </div>
                 </div>

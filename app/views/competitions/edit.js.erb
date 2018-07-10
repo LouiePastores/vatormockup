@@ -1,5 +1,7 @@
 console.log("Success")
 
-var success = '<div class="alert alert-success role="alert" style="width:50%;margin:auto;">Competition successfully updated!</div>'
+$(".alert").remove();
+
+var success = '<div class="alert alert-success alert-dismissible show" role="alert" style="width:50%;margin:auto;">Competition successfully updated!</div>'
 
 $(success).insertAfter('.title');

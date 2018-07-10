@@ -43,9 +43,13 @@
 }
 
 .competition-form{
-	width: 30%;
+	width: 40%;
 	margin: auto;
 }
+
+/*textarea{
+	height: 40%;
+}*/
 
 label{
 	text-align: center;
