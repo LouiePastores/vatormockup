@@ -1,25 +1,30 @@
 <div id="box">
 	<h1 class="title">List of Competitions</h1>
-		<div class="container">
+    <%unless notice.blank?%>
+      <div class="alert alert-success alert-dismissible show" 
+        role="alert" style="width:89%;margin:auto;"><%notice%>
+      </div>
+    <%end%>
+		<div class="container constainer-fluid">
       <div class="row">
         <%if Competition.blank?%>
           <div class="alert alert-info" role="alert">No records found!</div>
         <%else%>
-          <div class="col-sm-1">ID</div>
-            <div class="col-sm-8">Competition Title</div>
-            <div class="col-sm-3">Action</div>
+            <div class="col-sm-6 edit-item">Competition Title</div>
+            <div class="col-sm-3 edit-item">Category</div>
+            <div class="col-sm-3 edit-item">Action</div>
           </div>
               <% @competitions.each do |c|%>
                 <div class="row">
-                  <div class="col-sm-1"><%=c.id%></div>
-                  <div class="col-sm-8"><%=c.title%></div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-6 edit-item"><%=c.title%></div>
+                  <div class="col-sm-3 edit-item"><%=c.category || "None" %></div>
+                  <div class="col-sm-1 edit-item">
                     <%= link_to "View", competition_path(c) %>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 edit-item">
                      <%= link_to "Edit", edit_competition_path(c) %>
                   </div>
-                  <div class="col-sm-1">
+                  <div class="col-sm-1 edit-item">
                     <%= link_to "Delete", competition_path(c),
                       method: :delete,
                       :remote => true,
@@ -31,9 +36,9 @@
               <%end%>
         <%end%>
     </div>
-    <div id="addCompetition" class="footer">
-      <button class="linkButton">
-          <%= link_to "Back to List", competitions_path %>
+    <div class="footer">
+      <button class="btn btn-success">
+          <%= link_to "Home", competitions_path %>
       </button>   
   </div>
 </div>

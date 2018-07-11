@@ -1,43 +1,43 @@
 <%= stylesheet_link_tag params[:controller] %>
-<% content_for :head do %>
-  
+  <% content_for :head do %>
 <% end %>
 
-<div id="box">
-    <h1 class='title'>Listing competitions</h1>
-    <%unless notice.blank?%>
-        <div class="alert alert-success alert-dismissible show" 
-         role="alert" style="width:89%;margin:auto;">Competition successfully added!</div>
-    <%end%>
-    <%if Competition.blank?%>
-        <div class="alert alert-info" role="alert">No records found!</div>
-    <%else%>
-    <center>
-        <div id="competition-container">
-            <% @competitions.each do |competition| %>
-            <div id="competition">
-                <h3 class="competition-title"><%=competition.title%></h3>
-                <p class="competition-description">
+<div class="container container-fluid">
+  <h2 class="title">Listing Competition</h3>
+  <%unless notice.blank?%>
+      <div class="alert alert-success alert-dismissible show" 
+         role="alert" style="width:89%;margin:auto;">Competition successfully added!
+      </div>
+  <%end%>
+  <%if Competition.blank?%>
+    <div class="alert alert-info" role="alert">No records found!</div>
+  <%else%>
+    <div class="row display-flex">
+      <% @competitions.each do |competition| %>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <%=link_to competition_path(competition) do%>
+                <div class="caption">
+                  <h3 class="competition-title"><%=competition.title%></h3>
+                  <p class="competition-description">
                     <%=truncate(strip_tags(competition.description), length: 120, separator: ' ').html_safe%>
-                </p>
-                <p class="competition-category">Category: <%=competition.category%></p>
-                <center>
-                    <p class="competition-details">
-                        Competition starts at <%=competition.start_date.strftime(' %B %d, %Y')%> and ends at <%=competition.end_date.strftime(' %B %d, %Y')%>
-                    </p>
-                </center>
-            </div>
+                  </p>
+                  <p class="competition-category">Category: <%=competition.category%></p>
+                  <p class="competition-details"> Competition starts at <strong><%=competition.start_date.strftime(' %B %d, %Y')%></strong> and ends at <strong><%=competition.end_date.strftime(' %B %d, %Y')%></strong>
+                  </p>
+                </div>
             <%end%>
+          </div>
         </div>
-    </center>
-    <%end%>
-</div>
-
-<div id="addCompetition" class="footer">
-    <button class="linkButton">
-        <%= link_to "Add Competition", new_competition_path %>
+      <%end%>
+    </div>
+  <%end%>
+  <div id="box" class="footer">
+    <button class="btn btn-primary footer-button">
+      <%= link_to "Add Competition", new_competition_path %>
     </button>
-    <button class="linkButton">
-        <%= link_to "Edit Competitions", list_competition_path %>
+    <button class="btn btn-info footer-button">
+      <%= link_to "Edit Competitions", list_competition_path %>
     </button>    
+  </div>
 </div>

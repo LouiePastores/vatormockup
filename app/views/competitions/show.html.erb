@@ -1,30 +1,17 @@
-<p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag params[:controller] %>
+<% content_for :head do %>
+<% end %>
 
-<p>
-  <b>Title:</b>
-  <%= @competition.title %>
-</p>
+<div class="container-fluid">
+    <h2 class="competition-title"><%=@competition.title%></h2>    
+</div>
 
-<p>
-  <b>Description:</b>
-  <%= @competition.description %>
-</p>
-
-<p>
-  <b>Start date:</b>
-  <%= @competition.start_date %>
-</p>
-
-<p>
-  <b>End date:</b>
-  <%= @competition.end_date %>
-</p>
-
-<p>
-  <b>Category:</b>
-  <%= @competition.category %>
-</p>
-
-
-<%= link_to 'Edit', edit_competition_path(@competition) %> |
-<%= link_to 'Back', competitions_path %>
+<!-- <div id="addCompetition" class="footer">
+    <button class="linkButton">
+        <%= link_to "Add Competition", new_competition_path %>
+    </button>
+    <button class="linkButton">
+        <%= link_to "Edit Competitions", list_competition_path %>
+    </button>    
+</div>
+ -->

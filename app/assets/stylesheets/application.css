@@ -16,17 +16,35 @@
 
 .title{
 	text-align: center;
-	font-size: 3vw; 
 }
 
 #box{
-	margin: 2%;
-	margin-top: 4%;
-	display: block;
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	text-align: center;
 
 }
 
+.row.display-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.thumbnail {
+  height: 100%;
+  width: 100%;
+}
+
 [class*="col-"] {
+  padding: 1%;
+  /*background-color: #eee;*/
+  /*background-color: rgba(86,61,124,.15);*/
+  /*border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);*/
+  text-align: center;
+}
+
+.edit-item{
   padding: 1%;
   /*background-color: #eee;*/
   /*background-color: rgba(86,61,124,.15);*/
@@ -40,6 +58,14 @@
 	border-style: none;
 	border-radius: 5px;
 	padding: 2%;
+}
+
+.footer{
+	padding: 2%;
+}
+
+.footer-button{
+	margin: 0.5%;
 }
 
 .competition-form{
@@ -104,16 +130,13 @@ a:link, a:visited {
     color: black;
     text-align: center; 
     text-decoration: none;
-    display: inline-block;
-}
-
-a:hover, a:active {
-    background-color: rgb(133, 249, 94);
+    /*display: inline-block;*/
 }
 
 
 .competition-title{
 	text-align: center;
+	color: rgb(133, 249, 94);
 	font-size: 2.5vmin;
 }
 

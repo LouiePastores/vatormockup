@@ -4,13 +4,13 @@
   <title>VatorX</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "holder" %>
   <%= csrf_meta_tags %>
   <% if content_for?(:head) %>
 	  <%= yield(:head) %>
 	<% end %>
 </head>
 <body>
-
 <%= yield %>
 
 </body>
