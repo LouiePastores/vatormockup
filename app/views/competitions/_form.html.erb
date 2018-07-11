@@ -41,14 +41,15 @@
         <center>
           <%= f.submit class: 'btn btn-primary'%>
           <%= submit_tag("Reset", {:type => 'reset', :class => 'btn btn-danger footer-button'}) %>
-
-          <div class="footer">
-            <button class="btn btn-seconday footer-button">
-                <%= link_to "Back to List", competitions_path %>
-            </button>   
-          </div>
         </center>
       </div>
     <% end %>
   </div>
+</div>
+<div class="footer">
+  <%= link_to competitions_path do%>
+    <button class="btn btn-seconday footer-button">
+      Back to List
+    </button>
+  <%end%>
 </div>

@@ -38,16 +38,18 @@
         <%= f.label :is_featured %>
         <%= f.check_box :is_featured, class: 'form-check-input' %>
       </div>
-      <div class="actions">
-        <center>
-          <%= f.submit class: 'btn btn-primary'%>
-          <div class="footer">
-            <button class="btn btn-seconday footer-button">
-                <%= link_to "Back to List", competitions_path %>
-            </button>   
-          </div>
-        </center>
-      </div>
+        <center><%= f.submit class: 'btn btn-primary'%></center>
     </div>
   </div>
 <% end %>
+<div class="actions">
+  <center>
+    <div class="footer">
+      <%= link_to list_competition_path do%>
+        <button class="btn btn-seconday footer-button">
+          Back to List
+        </button>   
+      </div>
+      <%end%>
+  </center>
+</div>

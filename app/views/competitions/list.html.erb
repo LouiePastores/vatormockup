@@ -37,8 +37,10 @@
         <%end%>
     </div>
     <div class="footer">
-      <button class="btn btn-success">
-          <%= link_to "Home", competitions_path %>
-      </button>   
+      <%= link_to competitions_path do%>
+        <button class="btn btn-success">
+          Home
+        </button>   
+      <%end%>
   </div>
 </div>

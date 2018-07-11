@@ -2,7 +2,7 @@
   <% content_for :head do %>
 <% end %>
 
-<div class="container container-fluid">
+<div class="container container-fluid center-field">
   <h2 class="title">Listing Competition</h3>
   <%unless notice.blank?%>
       <div class="alert alert-success alert-dismissible show" 
@@ -33,11 +33,15 @@
     </div>
   <%end%>
   <div id="box" class="footer">
-    <button class="btn btn-primary footer-button">
-      <%= link_to "Add Competition", new_competition_path %>
-    </button>
-    <button class="btn btn-info footer-button">
-      <%= link_to "Edit Competitions", list_competition_path %>
-    </button>    
+    <%= link_to new_competition_path do%>
+      <button class="btn btn-primary footer-button">
+        Add Competition
+      </button>
+    <%end%>
+    <%= link_to list_competition_path do%>
+      <button class="btn btn-info footer-button">
+        Edit Competitions
+      </button>   
+    <%end%>
   </div>
 </div>
