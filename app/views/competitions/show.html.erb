@@ -2,16 +2,47 @@
 <% content_for :head do %>
 <% end %>
 
-<div class="container-fluid float-left">
-    <h2 class="competition-title"><%=@competition.title%></h2>
+<div class="container-fluid details">
+  <h2 class="title">Competition Details</h2>
+  <hr width="25%" noshade>
+  <h1 class="competition-title"><%=@competition.title%></h2>
+  <hr width="25%" noshade>
+  <div class="description-container">
+    <h3 class="title">Description</h3>
+    <%= simple_format @competition.description%>
+  </div>
+  <hr width="25%" noshade>
+  <div class="category-container">
+    <p class="competition-category-title">Category:
+      <span class="category"><%=@competition.category%></span>
+    </p>
+  </div>
+  <hr width="25%" noshade>
+  <h3 class="title">Details</h3>
+  <div class="detail-container">
+    <p>Competition will start at 
+      <span class="date">
+        <strong>
+          <%=@competition.start_date.strftime(' %B %d, %Y')%>
+        </strong>
+      </span>
+      <br />
+      and will end at 
+      <span class="date">
+        <strong>
+          <%=@competition.end_date.strftime(' %B %d, %Y')%>
+        </strong>
+      </span>
+    </p>
+  </div>
 </div>
 
-<!-- <div id="addCompetition" class="footer">
-    <button class="linkButton">
-        <%= link_to "Add Competition", new_competition_path %>
-    </button>
-    <button class="linkButton">
-        <%= link_to "Edit Competitions", list_competition_path %>
-    </button>    
-</div>
- -->
+<center>
+  <div class="footer">
+    <%= link_to competitions_path do%>
+      <button class="btn btn-success">
+        Back
+      </button>   
+    <%end%>
+  </div>
+</center>

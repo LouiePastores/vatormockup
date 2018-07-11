@@ -33,6 +33,7 @@
 .thumbnail {
   height: 100%;
   width: 100%;
+  background-color: #ececec;
 }
 
 [class*="col-"] {
@@ -54,14 +55,14 @@
 }
 
 .submit-form{
-	background-color: rgb(133, 249, 94);
+	background-color: #72c02c;
 	border-style: none;
 	border-radius: 5px;
 	padding: 2%;
 }
 
 .footer{
-	padding: 2%;
+	padding: 1%;
 }
 
 .footer-button{
@@ -90,7 +91,7 @@ html{
 label{
 	text-align: center;
 	margin: 0.5%;
-	color: rgb(133, 249, 94);
+	color: #72c02c;
 }
 
 .alert{
@@ -98,7 +99,7 @@ label{
 	text-align: center;
 }
 
-#competition-container{
+.competition-container{
 	margin: 2%;
 	padding: 2%;
 	display: table-cell;
@@ -123,7 +124,7 @@ label{
 }
 
 .linkButton{
-	background-color: rgb(133, 249, 94);
+	background-color: #72c02c;
 	border-radius: 8px;
 	border: none;
 	padding: 1.5%;
@@ -140,8 +141,13 @@ a:link, a:visited {
 
 .competition-title{
 	text-align: center;
-	color: rgb(133, 249, 94);
+	color: #72c02c;
 	font-size: 2.5vmin;
+}
+
+.description-container{
+	width: 60%;
+	margin: auto;
 }
 
 .competition-description{
@@ -160,6 +166,29 @@ a:link, a:visited {
 	font-size: 2vmin;
 }
 
+.category{
+	color: #72c02c;
+	font-size: 2.5vmin;
+}
+
+.detail-container{
+	width: 40%;
+	margin: auto;
+	text-align: right;
+}
+
+.date{
+	color: #72c02c;
+	font-size: 2vmin;
+}
+
+.competition-category-title{
+	margin: auto;
+	text-align: left;
+	width: 30%;
+	font-size: 3vmin;
+}
+
 .competition-details{
 	padding: 2%;
 	margin-left: 5%;
@@ -169,6 +198,19 @@ a:link, a:visited {
 	font-size: 2vmin;	
 }
 
+.details{
+	width: 50%;
+	margin: auto;
+	background-color: #ececec;
+	padding: 2%;
+	margin-top: 2%;
+}
+
+hr{
+	background-color: white;
+	height: 1px;
+	border: 0;
+}
 
 #create{
 	text-align: center;
