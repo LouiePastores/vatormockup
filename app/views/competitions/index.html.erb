@@ -27,12 +27,12 @@
                   <p class="competition-details"> Competition starts at 
                     <span class="date">
                       <strong>
-                        <%=competition.start_date.strftime(' %B %d, %Y')%>
+                        <%=competition.start_date.strftime(' %B %d, %Y, %I:%M %p',)%>
                       </strong>
                     </span> and ends at 
                       <span class="date">
                         <strong>
-                          <%=competition.end_date.strftime(' %B %d, %Y')%>
+                          <%=competition.end_date.strftime(' %B %d, %Y, %I:%M %p')%>
                         </strong>
                       </span>
                   </p>
