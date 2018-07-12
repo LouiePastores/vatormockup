@@ -17,6 +17,7 @@
 
 .title{
 	text-align: center;
+	font-size: 3vmin;
 }
 
 #box{
@@ -151,6 +152,10 @@ a:link, a:visited {
 	margin: auto;
 }
 
+.description-container p{
+	font-size: 2vmin;
+}
+
 .competition-description{
 	padding: 2%;
 	margin-left: 5%;
@@ -205,6 +210,15 @@ a:link, a:visited {
 	background-color: #ececec;
 	padding: 2%;
 	margin-top: 2%;
+}
+
+.details img{
+	width: 100%;
+	padding: 2%;
+}
+
+.competition-form img{
+	padding: 2%;
 }
 
 hr{

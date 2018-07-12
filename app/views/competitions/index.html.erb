@@ -19,7 +19,7 @@
           <div class="thumbnail">
             <%=link_to competition_path(competition) do%>
                 <div class="caption">
-                  <%= image_tag competition.image.url, :class => "img-responsive" %>
+                  <%= image_tag competition.image.url(:thumb), :class => "img-responsive" %>
                   <h3 class="competition-title"><%=competition.title%></h3>
                   <p class="competition-description">
                     <%=truncate(strip_tags(competition.description), length: 120, separator: ' ').html_safe%>
