@@ -1,4 +1,9 @@
-<%= form_for(@competition) do |f| %>
+<% content_for :datepicker do %>
+  <%= javascript_include_tag "form.js" %>
+<% end %>
+
+
+<%= form_for @competition do |f| %>
   <div class="competition-form">
     <div class="form-group">
       <% if @competition.errors.any? %>
@@ -15,28 +20,32 @@
 
       <div class="field">
         <%= f.label :title %>
-        <%= f.text_field :title, class: 'form-control col-sm-4' %>
+        <%= f.text_field :title, class: 'form-control col-sm-4', :required => true%>
+      </div>
+      <div class="form-group">
+        <%= f.label :image %>
+        <%= f.file_field :image, class: 'form-control' %>
       </div>
       <div class="field">
         <%= f.label :description %><br />
-        <%= f.text_area :description, class: 'form-control', :rows => 6  %>
+        <%= f.text_area :description, class: 'form-control', :rows => 6, :required => true%>
       </div>
-      <div class="field">
+      <div class="field" style="position: relative">
         <%= f.label :start_date %><br />
-        <%= f.datetime_select :start_date, class: 'form-control' %>
+        <%= f.text_field :start_date, class: 'form-control', :required => true%>
       </div>
-      <div class="field">
+      <div class="field" style="position: relative">
         <%= f.label :end_date %><br />
-        <%= f.datetime_select :end_date, class: 'form-control' %>
+        <%= f.text_field :end_date, class: 'form-control', :required => true%>
       </div>
       <div class="field">
         <%= f.label :category %><br />
-        <%= f.text_field :category, class: 'form-control' %>
+        <%= f.text_field :category, class: 'form-control', :required => true%>
       </div>
-      <div class="field">
+      <!-- <div class="field">
         <%= f.label :is_featured %>
         <%= f.check_box :is_featured, class: 'form-check-input' %>
-      </div>
+      </div> -->
       <div class="actions">
         <center>
           <%= f.submit class: 'btn btn-primary'%>
@@ -46,10 +55,12 @@
     <% end %>
   </div>
 </div>
+<center>
 <div class="footer">
   <%= link_to competitions_path do%>
     <button class="btn btn-seconday footer-button">
       Back to List
     </button>
   <%end%>
-</div>
+</div>  
+</center>
