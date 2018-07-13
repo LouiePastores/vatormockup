@@ -8,6 +8,7 @@ VatorX::Application.routes.draw do
 
   root :to => "competitions#index"
   get "/list" => "competitions#list", as: :list_competition
+  get "/search/:id" => "competitions#search", as: :search_tag
 
 
   # The priority is based upon order of creation:

@@ -24,7 +24,11 @@
                   <p class="competition-description">
                     <%=truncate(strip_tags(competition.description), length: 120, separator: ' ').html_safe%>
                   </p>
-                  <p class="competition-category">Category: <%=competition.category%></p>
+                  <p class="competition-category">Category:
+                      <%competition.category.each do |category|%>
+                        <%= link_to category.name, search_tag_path(category) %>
+                      <%end%>
+                  </p>
                   <p class="competition-details"> Competition starts at 
                     <span class="date">
                       <strong>

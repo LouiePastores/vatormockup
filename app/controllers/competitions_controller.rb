@@ -86,4 +86,11 @@ class CompetitionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def search
+    @tag =  ActsAsTaggableOn::Tag.find(params[:id])
+    @competitions = Competition.tagged_with(@tag.name)
+
+  end
+
 end

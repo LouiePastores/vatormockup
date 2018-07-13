@@ -17,7 +17,11 @@
   <hr width="25%" noshade>
   <div class="category-container">
     <p class="competition-category-title">Category:
-      <span class="category"><%=@competition.category%></span>
+      <span class="category">
+        <%@competition.category.each do |category|%>
+          <%= link_to category.name, search_tag_path(category) %>
+        <%end%>
+      </span>
     </p>
   </div>
   <hr width="25%" noshade>

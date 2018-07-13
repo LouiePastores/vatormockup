@@ -177,6 +177,11 @@ a:link, a:visited {
 	font-size: 2.5vmin;
 }
 
+.category a{
+	color: #72c02c;
+	font-size: 2.5vmin;
+}
+
 .detail-container{
 	width: 40%;
 	margin: auto;
@@ -190,8 +195,8 @@ a:link, a:visited {
 
 .competition-category-title{
 	margin: auto;
-	text-align: left;
-	width: 30%;
+	text-align: center;
+	width: 100%;
 	font-size: 3vmin;
 }
 

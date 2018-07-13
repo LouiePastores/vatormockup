@@ -1,5 +1,6 @@
 class Competition < ActiveRecord::Base
-  attr_accessible :category, :end_date, :start_date, :title, :description, :is_featured, :image
+  attr_accessible :category, :end_date, :start_date, :title, :description, :is_featured, :image, :category_list
+  acts_as_taggable_on :category
   has_attached_file :image,
   	:styles => {
       :thumb => "360x130#",

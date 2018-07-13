@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'bootstrap3-rails'
 gem 'paperclip'
+gem 'acts-as-taggable-on'
 
 #Gems for bootstrap 3 date and time picker
 gem 'momentjs-rails', '>= 2.9.0'
