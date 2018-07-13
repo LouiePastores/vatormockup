@@ -14,8 +14,6 @@ gem 'paperclip'
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'
 
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
