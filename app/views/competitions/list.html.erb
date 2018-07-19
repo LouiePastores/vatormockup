@@ -11,16 +11,22 @@
         <%if Competition.blank?%>
           <div class="alert alert-info" role="alert">No records found!</div>
         <%else%>
-            <div class="col-sm-6 edit-item">Competition Title</div>
+            <div class="col-sm-3 edit-item">Competition Title</div>
             <div class="col-sm-3 edit-item">Category</div>
+            <div class="col-sm-3 edit-item">Location</div>
             <div class="col-sm-3 edit-item">Action</div>
           </div>
               <% @competitions.each do |c|%>
                 <div class="row">
-                  <div class="col-sm-6 edit-item"><%=c.title%></div>
+                  <div class="col-sm-3 edit-item"><%=c.title%></div>
                   <div class="col-sm-3 edit-item">
                     <%c.category.each do |category|%>
                       <%= link_to category.name, search_tag_path(category) %>
+                    <%end%>
+                  </div>
+                  <div class="col-sm-3 edit-item">
+                    <%c.location.each do |location|%>
+                      <%= link_to location.name, search_location_path(location) %>
                     <%end%>
                   </div>
                   <div class="col-sm-1 edit-item">

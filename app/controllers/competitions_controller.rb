@@ -90,7 +90,11 @@ class CompetitionsController < ApplicationController
   def search
     @tag =  ActsAsTaggableOn::Tag.find(params[:id])
     @competitions = Competition.tagged_with(@tag.name)
+  end
 
+  def search_location
+    @location =  ActsAsTaggableOn::Tag.find(params[:id])
+    @competitions = Competition.tagged_with(@location.name)
   end
 
 end

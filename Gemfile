@@ -11,6 +11,10 @@ gem 'bootstrap3-rails'
 gem 'paperclip'
 gem 'acts-as-taggable-on'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.7'
+end
+
 #Gems for bootstrap 3 date and time picker
 gem 'momentjs-rails', '>= 2.9.0'
 gem 'bootstrap3-datetimepicker-rails', '~> 4.17.47'

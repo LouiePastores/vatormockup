@@ -29,6 +29,11 @@
                         <%= link_to category.name, search_tag_path(category) %>
                       <%end%>
                   </p>
+                  <p class="competition-category">Location: 
+                    <%competition.location.each do |location|%>
+                      <%= link_to location.name, search_location_path(location) %>
+                    <%end%>
+                  </p>
                   <p class="competition-details"> Competition starts at 
                     <span class="date">
                       <strong>
